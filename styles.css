@@ -1,0 +1,84 @@
+body {
+    background-color: #F6EEC9;
+    color: white;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.header {
+    background-color: #799351;
+    margin: 0;
+    height: 125px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.game-area {
+    display: flex;
+    justify-content: center;
+    gap: 48px;
+    padding: 48px;
+}
+
+.human-box, .computer-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.human-score-box, .computer-score-box {
+    display: flex;
+}
+
+.human-score, .computer-score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: black;
+    width: 32px;
+    height: 525px;
+}
+
+.human-score-tiles, .computer-score-tiles {
+    margin-top: auto;
+}
+
+.score-tile {
+    background-color: yellow;
+    width: 25px;
+    height: 25px;
+    margin-bottom: 4px;
+}
+
+.human-choices, .computer-choices {
+    display: flex;
+    flex-direction: column;
+}
+
+p {
+    background-color: black;
+    margin: 0;
+    text-align: center;
+    width: 175px;
+}
+
+.human-box p {
+    margin-left: auto;
+}
+
+button {
+    background-color: white;
+    width: 175px;
+    height: 175px;
+}
+
+.footer {
+    color: #5C4033;
+    text-align: center;
+    font-family: "Nothing You Could Do", Georgia, 'Times New Roman', Times, serif;
+    font-size: 25px;
+    font-weight: bold;
+}

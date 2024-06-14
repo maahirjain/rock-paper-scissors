@@ -4,9 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
-    <script src="./script.js"></script>
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
+    <!-- <script src="./script.js"></script> -->
 </head>
 <body>
-    
+    <div class="header">ROCK PAPER SCISSORS</div>
+
+    <div class="game-area">
+        <div class="human-box">
+            <p>Your Choice</p>
+            <div class="human-score-box">
+                <div class="human-score">
+                    <div class="human-score-tiles">
+                        <div class="score-tile"></div>
+                        <div class="score-tile"></div>
+                        <div class="score-tile"></div>
+                        <div class="score-tile"></div>
+                        <div class="score-tile"></div>
+                    </div>
+                </div>
+                <div class="human-choices">
+                    <button>rock</button>
+                    <button>paper</button>
+                    <button style="background-color: #EE4E4E;">scissors</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="computer-box">
+            <p>Computer Choice</p>
+            <div class="computer-score-box">
+                <div class="computer-choices">
+                    <button>rock</button>
+                    <button style="background-color: #A1DD70;">paper</button>
+                    <button>scissors</button>
+                </div>
+                <div class="computer-score">
+                    <div class="computer-score-tiles">
+                        <div class="score-tile"></div>
+                        <div class="score-tile"></div>
+                        <div class="score-tile"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">Created by Maahir Jain</div>
 </body>
 </html>
