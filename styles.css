@@ -15,6 +15,8 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
+    font-family: "Rowdies", sans-serif;
+    font-size: 32px;
 }
 
 .game-area {
@@ -37,9 +39,10 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: black;
+    background-color: #3b3b3b;
     width: 32px;
     height: 525px;
+    border-radius: 5px;
 }
 
 .human-score-tiles, .computer-score-tiles {
@@ -50,6 +53,7 @@ body {
     background-color: yellow;
     width: 25px;
     height: 25px;
+    border-radius: 5px;
     margin-bottom: 4px;
 }
 
@@ -59,10 +63,13 @@ body {
 }
 
 p {
-    background-color: black;
+    background-color: #636363;
     margin: 0;
     text-align: center;
     width: 175px;
+    font-family: "Rowdies", sans-serif;
+    font-size: 16px;
+    border-radius: 5px 5px 0px 0px;
 }
 
 .human-box p {
@@ -71,9 +78,26 @@ p {
 
 button {
     background-color: white;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
     width: 175px;
     height: 175px;
+    border-radius: 5px;
 }
+
+.rock {
+    background-image: url("./images/rock.png");
+}
+
+.paper {
+    background-image: url("./images/paper.png");
+}
+
+.scissors {
+    background-image: url("./images/scissors.png");
+}
+
 
 .footer {
     color: #5C4033;
