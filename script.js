@@ -34,7 +34,8 @@ function computeWinner(humanChoice, computerChoice) {
 }
 
 function playRound(e) {
-    if (humanScore >= 16 || computerScore >= 16) {
+    let endScore = (window.screen.width < 465 ? 14 : 16)
+    if (humanScore >= endScore || computerScore >= endScore) {
         const header = document.querySelector(".header");
         if (humanScore > computerScore) {
             header.textContent = `You win ${humanScore}–${computerScore}!`;
@@ -43,8 +44,9 @@ function playRound(e) {
         } else {
             header.textContent = `You lose ${humanScore}–${computerScore} :(`
         }
-        document.querySelector("a").removeAttribute("href");
+        return;
     }
+
 
     const nodes = humanChoices.getElementsByTagName('*');
     const computerNodes = document.querySelector(".computer-choices").getElementsByTagName('*');
@@ -68,6 +70,7 @@ function playRound(e) {
 
         const halfScoreTile2 = document.createElement("div");
         halfScoreTile2.classList.add("half-score-tile");
+
         document.querySelector(".human-score-tiles").prepend(halfScoreTile1);
         document.querySelector(".computer-score-tiles").prepend(halfScoreTile2);
     } else if (computeWinner(humanSelection, computerSelection) === 1) {
@@ -88,13 +91,30 @@ function playRound(e) {
         document.querySelector(".computer-score-tiles").prepend(scoreTile);
     }
 
+    adaptTileSize();
+
     setTimeout(() => {
         for(var i = 0; i < nodes.length; i++) {
             nodes[i].disabled = false;
             nodes[i].style.backgroundColor = "white";
             computerNodes[i].style.backgroundColor = "white";
         }
-      }, 1000);
+      }, 1500);
+}
+
+if (window.screen.width < 465) {
+    document.querySelectorAll("button").forEach((element) => {element.setAttribute("style", "width: 125px; height: 125px;");});
+    document.querySelectorAll("p").forEach((element) => {element.setAttribute("style", "width: 125px; height: 45px;");});
+    document.querySelector(".human-score").setAttribute("style", "width: 24px; height: 375px;");
+    document.querySelector(".computer-score").setAttribute("style", "width: 24px; height: 375px;");
+    document.querySelector(".game-area").setAttribute("style", "gap: 32px;");
+}
+
+function adaptTileSize() {
+    if (window.screen.width < 465) {
+        document.querySelectorAll(".score-tile").forEach((element) => {element.setAttribute("style", "width: 18px; height: 18px;");});
+        document.querySelectorAll(".half-score-tile").forEach((element) => {element.setAttribute("style", "width: 18px; height: 9px;");});
+    }
 }
 
 getHumanChoice();
