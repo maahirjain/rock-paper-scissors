@@ -14,7 +14,7 @@ function getComputerChoice() {
     }
 }
 
-function getHumanChoice() {
+function startGame() {
     humanChoices.addEventListener("click", playRound, false);
 }
 
@@ -117,4 +117,4 @@ function adaptTileSize() {
     }
 }
 
-getHumanChoice();
+startGame();
