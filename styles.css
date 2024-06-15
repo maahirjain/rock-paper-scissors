@@ -62,6 +62,14 @@ a {
     margin-bottom: 4px;
 }
 
+.half-score-tile {
+    background-color: yellow;
+    width: 25px;
+    height: 12.5px;
+    border-radius: 2.5px;
+    margin-bottom: 4px;
+}
+
 .human-choices, .computer-choices {
     display: flex;
     flex-direction: column;
@@ -74,7 +82,7 @@ p {
     width: 175px;
     font-family: "Rowdies", sans-serif;
     font-size: 16px;
-    border-radius: 5px 5px 0px 0px;
+    border-radius: 5px 5px 0px 0px; 
 }
 
 .human-box p {
@@ -88,11 +96,13 @@ button {
     background-size: contain;
     width: 175px;
     height: 175px;
+    border: 2px solid black;
     border-radius: 5px;
 }
 
 .rock {
     background-image: url("./images/rock.png");
+    border-radius: 0px 0px 5px 5px;
 }
 
 .paper {
