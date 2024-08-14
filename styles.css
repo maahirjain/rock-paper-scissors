@@ -124,3 +124,8 @@ button {
     font-size: 25px;
     font-weight: bold;
 }
+
+.footer a {
+    color: #5C4033;
+    text-decoration: underline;
+}
